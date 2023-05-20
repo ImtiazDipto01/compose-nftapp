@@ -1,5 +1,6 @@
 package com.imtiaz.composenftapp.ui.onboarding
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.imtiaz.composenftapp.R
 import com.imtiaz.composenftapp.ui.theme.ComposeNFTAppTheme
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun OnBoardingScreen() {
     Scaffold {
@@ -28,7 +30,7 @@ fun OnBoardingScreen() {
                 painter = painterResource(id = R.drawable.bg1),
                 contentDescription = "Layout Background",
                 modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.FillBounds
             )
             Column(
                 modifier = Modifier
@@ -41,11 +43,13 @@ fun OnBoardingScreen() {
                     fontSize = 36.sp,
                     fontWeight = FontWeight.Black
                 )
-                Spacer(modifier = Modifier.fillMaxHeight(0.65f))
+                Spacer(modifier = Modifier.weight(1f))
                 Card(
                     /*shape = RoundedCornerShape(35.dp),*/
-                    elevation = 4.dp,
+                    elevation = 0.dp,
                     modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
                         .border(
                             width = 1.dp,
                             color = Color.White.copy(alpha = 0.1f),
@@ -56,7 +60,14 @@ fun OnBoardingScreen() {
                     Image(
                         painter = painterResource(id = R.drawable.cardblur),
                         contentDescription = "card Background",
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .border(
+                                width = 1.dp,
+                                color = Color.Transparent,
+                                shape = RoundedCornerShape(27.dp)
+                            )
+                            .clip(RoundedCornerShape(27.dp)),
                         contentScale = ContentScale.Crop
                     )
                     Column(
@@ -68,12 +79,14 @@ fun OnBoardingScreen() {
                             textAlign = TextAlign.Center,
                             color = Color.White,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 20.sp
+                            fontSize = 18.sp
                         )
                         Text(
                             text = "You can buy and sell the NFTs of the best artists in the world.",
                             textAlign = TextAlign.Center,
-                            color = Color.White.copy(0.8f)
+                            color = Color.White.copy(0.8f),
+                            fontSize = 14.sp,
+                            modifier = Modifier.padding(top = 4.dp)
                         )
                         Spacer(
                             modifier = Modifier
@@ -102,7 +115,7 @@ fun OnBoardingScreen() {
                                 text = "Get started now",
                                 modifier = Modifier.padding(horizontal = 40.dp, vertical = 4.dp),
                                 fontSize = 15.sp,
-                                fontWeight = FontWeight.SemiBold
+                                fontWeight = FontWeight.SemiBold,
                             )
                         }
                     }
