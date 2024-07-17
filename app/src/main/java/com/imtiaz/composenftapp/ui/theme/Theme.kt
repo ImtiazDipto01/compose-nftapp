@@ -37,7 +37,7 @@ fun ComposeNFTAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Com
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = NFTTypography,
         shapes = Shapes,
         content = content
     )

@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.imtiaz.composenftapp.R
 import com.imtiaz.composenftapp.ui.theme.ComposeNFTAppTheme
+import com.imtiaz.composenftapp.ui.theme.NFTTypography
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -41,9 +42,7 @@ fun OnBoardingScreen(
             ) {
                 Text(
                     text = "Welcome to NFT Marketplace",
-                    color = Color.White,
-                    fontSize = 36.sp,
-                    fontWeight = FontWeight.Black
+                    style = NFTTypography.h1
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Card(
@@ -78,10 +77,7 @@ fun OnBoardingScreen(
                     ) {
                         Text(
                             text = "Explore and Mint NFTs",
-                            textAlign = TextAlign.Center,
-                            color = Color.White,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp
+                            style = MaterialTheme.typography.body2
                         )
                         Text(
                             text = "You can buy and sell the NFTs of the best artists in the world.",
@@ -116,8 +112,7 @@ fun OnBoardingScreen(
                             Text(
                                 text = "Get started now",
                                 modifier = Modifier.padding(horizontal = 40.dp, vertical = 4.dp),
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.SemiBold,
+                                style = MaterialTheme.typography.button
                             )
                         }
                     }
