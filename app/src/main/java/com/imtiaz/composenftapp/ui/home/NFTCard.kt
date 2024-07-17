@@ -136,7 +136,7 @@ fun NftCard(
                         } else {
                             Icons.Default.FavoriteBorder
                         },
-                        contentDescription = ""
+                        contentDescription = "Icon Liked"
                     )
                 }
                 Text(

@@ -23,7 +23,9 @@ import com.imtiaz.composenftapp.ui.theme.ComposeNFTAppTheme
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    onNavigationEvent: () -> Unit
+) {
     Scaffold {
         Box {
             Image(
@@ -93,7 +95,7 @@ fun OnBoardingScreen() {
                                 .padding(bottom = 27.dp)
                         )
                         Button(
-                            onClick = { /*TODO*/ },
+                            onClick = onNavigationEvent,
                             modifier = Modifier
                                 .border(
                                     width = 1.dp,
@@ -129,6 +131,8 @@ fun OnBoardingScreen() {
 @Composable
 fun OnBoardingCardPreview() {
     ComposeNFTAppTheme {
-        OnBoardingScreen()
+        OnBoardingScreen {
+
+        }
     }
 }
