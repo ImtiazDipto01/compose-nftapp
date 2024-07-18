@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -69,15 +70,12 @@ fun RankingRow(
         Column {
             Text(
                 text = title,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 17.sp,
-                color = Color.White,
+                style = MaterialTheme.typography.h6,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
                 text = "view info",
-                fontSize = 13.sp,
-                color = Color(235, 235, 245).copy(0.6f)
+                style = MaterialTheme.typography.subtitle2,
             )
         }
         Spacer(modifier = Modifier.weight(1f))
@@ -97,8 +95,7 @@ fun RankingRow(
                 Text(
                     text = eth.toString(),
                     color = Color.White,
-                    fontSize = 13.sp,
-                    textAlign = TextAlign.Left
+                    style = MaterialTheme.typography.subtitle2,
                 )
             }
             Text(

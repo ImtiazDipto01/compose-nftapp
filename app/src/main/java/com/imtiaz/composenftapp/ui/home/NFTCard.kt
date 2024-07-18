@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.IconToggleButton
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -81,16 +82,11 @@ fun NftCard(
         ) {
             Text(
                 text = title,
-                color = Color.White,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 13.sp,
-                textAlign = TextAlign.Left
+                style = MaterialTheme.typography.subtitle1
             )
             Text(
                 text = subTitle,
-                color = Color(235, 235, 245).copy(0.6f),
-                fontSize = 12.sp,
-                textAlign = TextAlign.Left
+                style = MaterialTheme.typography.subtitle2
             )
         }
         Row(
@@ -108,9 +104,8 @@ fun NftCard(
                 )
                 Text(
                     text = eth.toString(),
-                    color = Color.White,
-                    fontSize = 13.sp,
-                    textAlign = TextAlign.Left
+                    style = MaterialTheme.typography.subtitle2,
+                    color = Color.White
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
@@ -141,10 +136,7 @@ fun NftCard(
                 }
                 Text(
                     text = liked.toString(),
-                    color = Color(235, 235, 245).copy(0.6f),
-                    fontWeight = FontWeight.Normal,
-                    fontSize = 13.sp,
-                    textAlign = TextAlign.Right
+                    style = MaterialTheme.typography.subtitle2
                 )
             }
         }

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.IconToggleButton
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -67,10 +68,7 @@ fun CollectionCard(
         ) {
             Text(
                 text = title,
-                fontSize = 13.sp,
-                fontWeight = FontWeight.SemiBold,
-                textAlign = TextAlign.Left,
-                color = Color.White
+                style = MaterialTheme.typography.subtitle1
             )
             Spacer(modifier = Modifier.weight(1f))
             Row(
@@ -92,9 +90,7 @@ fun CollectionCard(
                 }
                 Text(
                     text = likes.toString(),
-                    fontSize = 11.sp,
-                    textAlign = TextAlign.Right,
-                    color = Color(235, 235, 245).copy(0.6f)
+                    style = MaterialTheme.typography.subtitle2
                 )
             }
 

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -29,10 +30,7 @@ fun HomeScreen() {
                     Text(
                         text = "NFT Marketplace",
                         modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color.White
+                        style = MaterialTheme.typography.h2.copy(fontSize = 24.sp)
                     )
                 },
                 backgroundColor = Color.Transparent,
@@ -49,16 +47,12 @@ fun HomeScreen() {
             CategoryList()
             Text(
                 text = "Trending Collection",
-                fontSize = 20.sp,
-                color = Color.White,
-                fontWeight = FontWeight.SemiBold
+                style = MaterialTheme.typography.h5
             )
             CollectionList()
             Text(
                 text = "Top Seller",
-                fontSize = 20.sp,
-                color = Color.White,
-                fontWeight = FontWeight.SemiBold
+                style = MaterialTheme.typography.h5
             )
             NFTList()
         }

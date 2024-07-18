@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Tab
 import androidx.compose.material.TabPosition
@@ -62,11 +63,8 @@ fun StatsScreen() {
                     Column {
                         Text(
                             text = "Stats",
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color.White,
+                            style = MaterialTheme.typography.h3,
                             modifier = Modifier.fillMaxWidth(),
-                            textAlign = TextAlign.Center
                         )
                     }
                 },
@@ -135,9 +133,7 @@ fun CustomTabComponent() {
                        )
                        Text(
                            text = pair.first,
-                           fontWeight = FontWeight.SemiBold,
-                           fontSize = 17.sp,
-                           color = Color.White
+                           style = MaterialTheme.typography.h6
                        )
                    }
                 }
